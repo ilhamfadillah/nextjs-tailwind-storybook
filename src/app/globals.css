@@ -2,26 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-extrabold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AllRoundGothic";
+  src: url("/fonts/allroundgothic-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AllRoundGothic";
+  src: url("/fonts/allroundgothic-demi.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family-gilroy: "Gilroy";
+  --font-family-allRoundGothic: "AllRoundGothic";
+  --color-yellow: #ffbc01;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #161616;
+  box-shadow: inset 0.05em 0 0 var(--color-silver);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-yellow);
+  border-radius: 0.5em;
+  box-shadow: inset 0.15em 0.1em 0.1em rgba(255, 255, 255, 0.5), inset -0.15em -0.1em 0.1em rgba(0, 0, 0, 0.3);
+}
+
+::selection {
+  background: var(--color-black);
+  color: var(--color-yellow);
+}
+
+.color-yellow {
+  color: var(--color-yellow);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.font-allroundgothic {
+  font-family: var(--font-family-allRoundGothic);
+}
+
+.font-gilroy {
+  font-family: var(--font-family-gilroy);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--font-family-gilroy);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-allRoundGothic);
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 900;
+}
+
+.header-nav nav a {
+  font-size: 17px;
+  color: var(--color-white);
+  font-family: var(--font-family-allRoundGothic);
+}
+
+.banner-contact .banner-contact-left .page-title {
+  font-size: 60px;
+  color: var(--color-yellow);
+  line-height: 70px;
+  margin-bottom: 35px;
+  font-weight: 900;
+}
+
+.banner-contact .banner-contact-left .page-title strong {
+  color: var(--color-white);
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+.banner-contact .banner-contact-left p {
+  font-size: 17px;
+  line-height: 30px;
+  color: var(--color-white);
+  margin-bottom: 35px;
+}
+
+.banner-contact .banner-contact-right h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.banner-contact .banner-contact-right p {
+  font-size: 17px;
+  line-height: 30px;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
