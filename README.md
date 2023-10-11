@@ -1,4 +1,4 @@
-This project with using:
+This project uses:
 - Next.js 13
 - Tailwind CSS
 - Storybook
