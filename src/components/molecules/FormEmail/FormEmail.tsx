@@ -10,7 +10,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 interface IFormEmail {
   name: string;
   email: string;
-  phone: string;
+  phone?: string;
   message: string;
   agree: boolean;
 }
@@ -28,6 +28,7 @@ export const FormEmail = () => {
   const fields = {
     name: register("name", { required: "This is a required fields." }),
     email: register("email", { required: "This is a required fields." }),
+    phone: register("phone", { required: false }),
     message: register("message", { required: "This is a required fields." }),
     aggree: register("agree", { required: "This is a required fields." }),
   };
@@ -63,6 +64,7 @@ export const FormEmail = () => {
             placeholder="Phone"
             errorMessage=""
             showMessage={false}
+            {...fields.phone}
           />
         </div>
         <div className="mb-[20px]">

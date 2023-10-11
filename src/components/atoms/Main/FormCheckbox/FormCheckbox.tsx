@@ -16,7 +16,7 @@ const FormCheckbox: ForwardRefRenderFunction<
 > = ({ isChecked, description, showMessage, errorMessage, onClick, ...restProps }, ref) => {
   return (
     <>
-      <label className="grid grid-cols-[20px_auto]">
+      <label className="grid grid-cols-[20px_auto] w-[300px]">
         <input
           id="my-checkbox"
           type="checkbox"
@@ -34,7 +34,7 @@ const FormCheckbox: ForwardRefRenderFunction<
             }`}
           ></span>
         </div>
-        <p className="ml-1 mt-[-5px]">{description}</p>
+        <p className="ml-1 mt-[-5px] text-[17px] font-allroundgothic">{description}</p>
       </label>
       <label className={showMessage ? "block" : "hidden"}>{errorMessage}</label>
     </>
