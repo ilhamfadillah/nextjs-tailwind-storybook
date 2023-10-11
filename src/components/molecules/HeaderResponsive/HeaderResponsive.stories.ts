@@ -1,14 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import HeaderResponsive from "./index";
 
 const meta = {
   title: "Molecules/Header/HeaderResponsive",
   component: HeaderResponsive,
   parameters: {
-    layout: "centered",
     viewport: {
-      defaultViewport: 'responsive',
+      viewports: INITIAL_VIEWPORTS,
+      defaultViewport: 'iphone6',
+      defaultOrientation: "landscape"
     },
   },
   tags: ["autodocs"],

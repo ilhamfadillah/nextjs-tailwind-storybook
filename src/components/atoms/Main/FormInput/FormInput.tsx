@@ -12,6 +12,7 @@ const FormInput: ForwardRefRenderFunction<HTMLInputElement, IFormInput & Record<
   placeholder,
   showMessage,
   errorMessage,
+  ...restProps
 }, ref) => {
   return (
     <>
@@ -20,6 +21,7 @@ const FormInput: ForwardRefRenderFunction<HTMLInputElement, IFormInput & Record<
         type={type}
         placeholder={placeholder}
         ref={ref}
+        {...restProps}
       />
       <label className={showMessage ? "block" : "hidden"}>{errorMessage}</label>
     </>

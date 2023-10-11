@@ -34,6 +34,7 @@ export const FormEmail = () => {
 
   const onSubmit: SubmitHandler<IFormEmail> = async (emailRequest: any) => {
     console.log(emailRequest);
+    alert("this is onSubmit with data in console.log()");
   };
   return (
     <>

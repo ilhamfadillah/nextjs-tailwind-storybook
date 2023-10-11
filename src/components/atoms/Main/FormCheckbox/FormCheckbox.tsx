@@ -1,4 +1,6 @@
-import { ForwardRefRenderFunction, forwardRef } from "react";
+'use client'
+
+import { ForwardRefRenderFunction, forwardRef, useEffect, useState } from "react";
 
 interface IFormCheckbox {
   isChecked: boolean;
@@ -11,17 +13,17 @@ interface IFormCheckbox {
 const FormCheckbox: ForwardRefRenderFunction<
   HTMLInputElement,
   IFormCheckbox & Record<string, unknown>
-> = ({ isChecked, description, showMessage, errorMessage, onClick }, ref) => {
+> = ({ isChecked, description, showMessage, errorMessage, onClick, ...restProps }, ref) => {
   return (
     <>
-      <input
-        id="my-checkbox"
-        type="checkbox"
-        className="hidden"
-        checked={isChecked}
-        ref={ref}
-      />
-      <div className="grid grid-cols-[20px_auto]">
+      <label className="grid grid-cols-[20px_auto]">
+        <input
+          id="my-checkbox"
+          type="checkbox"
+          className="hidden"
+          ref={ref}
+          {...restProps}
+        />
         <div
           className="flex h-[20px] w-[20px] border-[1px] border-black"
           onClick={onClick}
@@ -33,7 +35,7 @@ const FormCheckbox: ForwardRefRenderFunction<
           ></span>
         </div>
         <p className="ml-1 mt-[-5px]">{description}</p>
-      </div>
+      </label>
       <label className={showMessage ? "block" : "hidden"}>{errorMessage}</label>
     </>
   );

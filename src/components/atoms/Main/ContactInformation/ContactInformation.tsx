@@ -15,11 +15,11 @@ export const ContactInformation = ({
 }: IContactInformation) => {
   return (
     <>
-      <div className="flex items-center py-2 transition ease delay-350 hover:text-[#FFBC01]">
+      <div className="flex items-center py-2">
         <span>
           <img src={logoSrc} alt={logoAlt} className="w-[30px] h-auto" />
         </span>
-        <span className="ml-4 text-[23px] text-white">
+        <span className="ml-4 text-[23px] text-white transition ease delay-350 hover:text-[#FFBC01]">
           <Link href={linkTo}>{label}</Link>
         </span>
       </div>

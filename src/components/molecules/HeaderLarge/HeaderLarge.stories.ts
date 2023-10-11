@@ -5,9 +5,6 @@ import HeaderLarge from "./index";
 const meta = {
   title: "Molecules/Header/HeaderLarge",
   component: HeaderLarge,
-  parameters: {
-    layout: "centered",
-  },
   tags: ["autodocs"],
 } satisfies Meta<typeof HeaderLarge>;
 

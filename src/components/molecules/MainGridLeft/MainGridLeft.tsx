@@ -15,9 +15,9 @@ export const MainGridLeft = () => {
             Contact Information
           </h4>
           
-          <ContactInformation logoSrc="https://uxbee.eu/assets/images/contact/icon-02.svg" logoAlt="office_address" linkTo="https://google.com" label="Elektronicaweg 37, 2628 XG Delft" />
-          <ContactInformation logoSrc="https://uxbee.eu/assets/images/contact/icon-03.svg" logoAlt="office_phone" linkTo="https://google.com" label="00 31 (0) 15 - 79 00 100" />
-          <ContactInformation logoSrc="https://uxbee.eu/assets/images/contact/icon-01.svg" logoAlt="office_email" linkTo="https://google.com" label="hello@uxbee.nl" />
+          <ContactInformation logoSrc="https://uxbee.eu/assets/images/contact/icon-02.svg" logoAlt="office_address" linkTo="https://goo.gl/maps/g5aY4qdzbpABG5D98" label="Elektronicaweg 37, 2628 XG Delft" />
+          <ContactInformation logoSrc="https://uxbee.eu/assets/images/contact/icon-03.svg" logoAlt="office_phone" linkTo="tel://+31157900100" label="00 31 (0) 15 - 79 00 100" />
+          <ContactInformation logoSrc="https://uxbee.eu/assets/images/contact/icon-01.svg" logoAlt="office_email" linkTo="mailto:hello@uxbee.nl" label="hello@uxbee.nl" />
           
           <div className="flex text-black mt-[45px] text-[23px]">
             <a

@@ -1,3 +1,6 @@
+import { ButtonScrollTop } from "@/components/atoms/Footer/ButtonScrollTop/ButtonScrollTop";
+import Link from "next/link";
+
 export const FooterBottom = () => {
   return (
     <>
@@ -15,11 +18,14 @@ export const FooterBottom = () => {
                 <p className="text-[13px]">Copyright 2023</p>
               </div>
               <div className="ml-[45px] xs:ml-0">
-                <p className="text-[13px]">Terms & Conditions </p>
+                <Link href="/" className="text-[13px]">Terms & Conditions </Link>
               </div>
               <div className="ml-[45px] xs:ml-0">
-                <p className="text-[13px]">Privacy statement </p>
+                <Link href="/" className="text-[13px]">Privacy statement </Link>
               </div>
+            </div>
+            <div className="flex justify-end mx-10">
+              <ButtonScrollTop />
             </div>
           </div>
         </div>
